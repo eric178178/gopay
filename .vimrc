@@ -1,5 +1,8 @@
 
 set nocompatible "不与 Vi 兼容
+let mapleader = ','
+set nobackup
+set noswapfile
 autocmd BufWritePost $MYVIMRC source $MYVIMRC "保存自动刷新配置
 syntax on "打开语法高亮
 set showmode "在底部显示命令模式还是插入模式
@@ -22,3 +25,9 @@ nmap <tab> V>
 nmap <s-tab> V<
 vmap <tab> >gv
 vmap <s-tab> <gv
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Lokaltog/vim-easymotion'
+call vundle#end()
