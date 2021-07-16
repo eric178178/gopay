@@ -31,3 +31,4 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
+filetype on
